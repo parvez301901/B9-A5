@@ -1,0 +1,139 @@
+.font-inter {			
+    font-family: "Inter", sans-serif;
+}
+.font-raleway {			
+    font-family: "Raleway", sans-serif;
+}
+body {
+    font-family: "Inter", sans-serif;
+    color: rgba(19, 19, 24, 0.60);
+}
+.info-count-box:after {
+    background-clip: padding-box;
+    background-color: #1DD100;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: 5px;
+    content: "";
+    left: -1px;
+    position: absolute;
+    right: 0;			
+    z-index: -1;
+    width: 101%;
+    height: 38px;
+    bottom: -10px;
+}
+
+.ticket-left-part:after {
+	content: '';
+	position: absolute;
+	background: #ffffff;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	right: 0;
+	bottom: -25px;
+}
+.ticket-left-part:before {
+	content: '';
+	position: absolute;
+	background: #ffffff;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	right: 0;
+	top: -25px;
+}
+.ticket-left-part-2:after {
+	content: '';
+	position: absolute;
+	background: #F7F8F8;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	right: 0;
+	bottom: -25px;
+}
+.ticket-left-part-2:before {
+	content: '';
+	position: absolute;
+	background: #F7F8F8;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	right: 0;
+	top: -25px;
+}
+.ticket-right-part:after {
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 153px;
+	border-left: 2px dashed #ffffff;
+	left: -25px;
+	top: 25px;	
+}
+.ticket-right-part-2:after {
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 310px;
+	border-left: 2px dashed #1DD100;
+	left: -25px;
+	top: 48px;
+}
+.bus-plan {
+	display: grid;
+	grid-template-columns: 35px 1fr 1fr 35px 1fr 1fr;
+	gap: 10px;
+	margin-top: 2rem;
+}
+.column {
+	display: grid;
+	column-gap: 3rem;
+	row-gap: 2rem;
+}
+.seat {
+	background-color: #F7F8F8;
+	padding: 10px;
+	text-align: center;
+	min-height: 52px;
+	border-radius: 15px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;	
+}
+.not-allowed {
+	cursor: not-allowed !important;	
+}
+.seat.selectedSeat {
+	background-color: #1DD100;	
+}
+.no-seat-bg {
+	background-color: transparent;
+	padding: 10px;
+	text-align: center;
+	min-height: 52px;
+	border-radius: 15px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+.driver {
+	background-color: #F7F8F8;
+	padding: 10px;
+	text-align: center;
+	min-height: 52px;
+	border-radius: 15px;
+	align-items: center;
+	display: flex;
+	justify-content: center;	
+}
+.final-error,
+.promo-error {
+	color: #FF0000;
+}
+.blank-column {	
+}

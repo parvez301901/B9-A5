@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Landing - Assaingment - B9-A5</title>
+	<link rel="shortcut icon" href="images/stoppage.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>	
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script>
+		tailwind.config = {
+			theme: {
+			extend: {
+				colors: {
+					'primaryColor': '#1DD100',
+					'primaryheadingColor': '#030712',
+					'primaryTextColor': 'rgba(3, 7, 18, 0.70)',
+					'primaryTextColoronDark': 'rgba(255, 255, 255, 0.60)',
+					'borderColor': 'rgba(19, 19, 24, 0.20)',
+					'primaryBgLight' : 'rgba( 29, 209, 0, 0.10)'
+				}
+			},
+			container: {
+				screens: {
+					'sm': '100%',
+					'md': '768',
+					'lg': '1024px',
+					'xl': '1200px',
+					'2xl': '1400px',
+				},
+			},
+			important: true,
+			}
+		}
+	</script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="md:container-xl px-4 md:mx-auto max-w-[1200px]">
+        <nav>
+            <div class="navbar pt-[20px] sm:pt-[44px] pl-0 pr-0 pb-6 sm:pb-0 bg-base-100 font-manrope">
+				<div class="navbar-start justify-start">
+					<div class="dropdown">
+						<div tabindex="0" role="button" class="btn btn-ghost lg:hidden pl-0">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+						</div>
+						<ul tabindex="0" class="menu text-base menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+							<li><a class="font-medium font-raleway">Home</a></li>
+							<li><a class="font-medium font-raleway">About</a></li>
+							<li><a class="font-medium font-raleway">Destination</a></li>
+							<li><a class="font-medium font-raleway">Search</a></li>
+						</ul>
+					</div>
+					<a class="text-4xl text-primaryheadingColor font-extrabold">P-Ticket</a>
+				</div>
+				<div class="navbar-center hidden lg:flex">
+					<ul class="gap-8 text-base menu-horizontal px-1">
+						<li><a class="font-medium font-raleway text-primaryColor text-lg">Home</a></li>
+						<li><a class="font-medium font-raleway text-lg text-primaryTextColor">About</a></li>
+						<li><a class="font-medium font-raleway text-lg text-primaryTextColor">Destination</a></li>
+						<li><a class="font-medium font-raleway text-lg text-primaryTextColor">Search</a></li>
+					</ul>
+				</div>
+				<div class="navbar-end">
+					<a class="btn text-primaryColor bg-primaryBgLight border-primaryBgLight py-4 px-8 h-auto">Bus <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M4 17C4 17.5304 4.21071 18.0391 4.58579 18.4142C4.96086 18.7893 5.46957 19 6 19C6.53043 19 7.03914 18.7893 7.41421 18.4142C7.78929 18.0391 8 17.5304 8 17M4 17C4 16.4696 4.21071 15.9609 4.58579 15.5858C4.96086 15.2107 5.46957 15 6 15C6.53043 15 7.03914 15.2107 7.41421 15.5858C7.78929 15.9609 8 16.4696 8 17M4 17H2V6C2 5.73478 2.10536 5.48043 2.29289 5.29289C2.48043 5.10536 2.73478 5 3 5H17C18.3261 5 19.5979 5.7375 20.5355 7.05025C21.4732 8.36301 22 10.1435 22 12M8 17H16M16 17C16 17.5304 16.2107 18.0391 16.5858 18.4142C16.9609 18.7893 17.4696 19 18 19C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17M16 17C16 16.4696 16.2107 15.9609 16.5858 15.5858C16.9609 15.2107 17.4696 15 18 15C18.5304 15 19.0391 15.2107 19.4142 15.5858C19.7893 15.9609 20 16.4696 20 17M20 17H22V12M22 12H17.5L16 5M2 10H17M7 5V10M12 5V10" stroke="#1DD100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg></a>
+				</div>
+			</div>
+        </nav>
+    </header>
+
+    <section class="md:container-xl px-4 md:mx-auto max-w-[1200px] md:pt-12 md:pb-12 sm:pt-6 sm:pb-6">		
+		
+		<div class="w-full bg-[url('/images/banner-image.jpg')] bg-cover bg-no-repeat flex pt-24 pb-28 justify-center rounded-[32px] overflow-hidden flex-col items-center">
+			<h1 class="leading-[5rem!important] text-4xl lg:text-5xl xl:text-6xl text-white font-extrabold max-w-[742px] text-center mb-4">End-to-End Travel with<br><span class="text-primaryColor">P Paribahan</span></h1>
+			<p class="text-white font-extrabold max-w-[742px] font-regular text-center font-normal text-lg">Join the journey hassle-free, and enjoy peace of mind knowing your travel plans are taken care of. Start your adventure with us today!</p>
+			<a class="bg-primaryColor text-black py-4 px-[30px] rounded-lg mt-8 font-bold" href="#">Buy Tickets</a>
+		</div>
+		<div class="w-full flex overflow-hidden flex-col sm:flex-col md:flex-row lg:flex-row items-center gap-8 justify-center mt-[-64px]">
+
+			<div class="flex rounded-[16px] items-center bg-white flex-col lg:flex-row sm:justify-center m-2 p-8 rounded-[12px] info-count-box relative gap-5">
+				<div>
+					<img src="images/people.png" alt="Shoes" />					
+				</div>
+				<div class="flex flex-col">
+					<h3 class="font-inter text-black text-2xl lg:text-4xl font-extrabold text-center sm:text-center">500K+</h3>
+					<p class="text-primaryTextColor font-inter text-center sm:text-center">Registered users</p>
+				</div>
+			</div>
+
+			<div class="flex rounded-[16px] items-center bg-white flex-col lg:flex-row sm:justify-center sm:items-center m-2 p-8 rounded-[12px] info-count-box relative gap-5">
+				<div>
+					<img src="images/ticket-cupon.png" alt="Shoes" />					
+				</div>
+				<div class="flex flex-col">
+					<h3 class="font-inter text-black text-2xl lg:text-4xl font-extrabold text-center sm:text-center">1.7 lacks</h3>
+					<p class="text-primaryTextColor font-inter text-center sm:text-center">Tickets sold</p>
+				</div>
+			</div>
+
+			<div class="flex rounded-[16px] items-center bg-white flex-col lg:flex-row sm:justify-center m-2 p-8 rounded-[12px] info-count-box relative gap-5">
+				<div>
+					<img src="images/stoppage.png" alt="Shoes" />					
+				</div>
+				<div class="flex flex-col">
+					<h3 class="font-inter text-black text-2xl lg:text-4xl font-extrabold text-center sm:text-center">80K+</h3>
+					<p class="text-primaryTextColor font-inter text-center sm:text-center">Rental partners</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="section-heading md:mt-24 mt-12 text-center py-8">
+			<h2 class="text-2xl md:text-4xl text-primaryheadingColor font-extrabold pb-6 font-raleway">Best offers for you</h2>			
+		</div>
+
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-12">
+            <!-- Card 1 -->
+			
+            <div class="p-1 text-center mb-10 md:mb-0">
+				<div class="join lg:join-horizontal">
+					<div class="join-item bg-[#FFBF0F] flex-col text-center rounded-[16px] justify-items-start pt-14 pb-14 pl-10 pr-20 ticket-left-part overflow-hidden relative gap-8 w-7/10">
+						<h4 class="text-left font-inter text-primaryheadingColor font-extrabold text-2xl md:text-4xl">15% OFF</h4>
+						<p class="text-left font-inter font-semibold text-xl text-primaryTextColor">on your next purchase</p>
+						<p class="text-left font-inter ">use by January 2024</p>
+					</div>					
+					<div class="join-item text-center bg-[#FFBF0F] flex flex-col rounded-[16px] items-center justify-items-center pt-14 pr-14 pb-14 pl-10 justify-center w-3/10 gap-2 relative ticket-right-part">
+						<h4 class="font-raleway text-3xl font-extrabold text-primaryheadingColor">NEW15</h4>
+						<p class="font-inter font-semibold">Coupon Code</p>
+					</div>
+				</div>
+            </div>
+			
+            <div class="p-1 text-center mb-10 md:mb-0">
+				<div class="join lg:join-horizontal">
+					<div class="join-item bg-[#F78C9C] flex-col text-center rounded-[16px] justify-items-start pt-14 pb-14 pl-10 pr-20 ticket-left-part overflow-hidden relative gap-8 w-7/10">
+						<h4 class="text-left font-inter text-primaryheadingColor font-extrabold text-2xl md:text-4xl">20% OFF</h4>
+						<p class="text-left font-inter font-semibold text-xl text-primaryTextColor">on your next purchase</p>
+						<p class="text-left font-inter ">use by January 2024</p>
+					</div>					
+					<div class="join-item text-center bg-[#F78C9C] rounded-[16px] flex flex-col items-center justify-items-center pt-14 pr-14 pb-14 pl-10 justify-center w-3/10 gap-2 relative ticket-right-part">
+						<h4 class="font-raleway text-2xl font-extrabold text-primaryheadingColor">Couple 20</h4>
+						<p class="font-inter font-semibold">Coupon Code</p>
+					</div>
+				</div>
+            </div>
+
+        </div>
+		<div class="text-center">
+			<button class="btn btn-outline px-8 py-4 border-primaryColor text-primaryColor">See All Offers</button>
+		</div>
+
+    </section>
+
+
+	<section class="rounded-tl-[88px] rounded-tr-[88px] bg-[#F7F8F8] pt-14 pb-32 mt-16 border-t-2 border-[#1DD100]">
+
+		<div class="section-heading text-center py-8">
+			<h2 class="text-2xl md:text-4xl text-primaryheadingColor font-extrabold pb-6 font-raleway">Best offers for you</h2>
+			<p>Book your bus tickets effortlessly today! Get on board with our hassle-free booking system.</p>
+		</div>
+
+		<div class="md:container-xl md:mx-auto max-w-[1200px] md:pt-12 md:pb-12 sm:pt-6 sm:pb-6">
+			<div class="text-center mb-10 md:mb-0">
+
+				<div class="join lg:join-horizontal">
+
+					<div class="join-item bg-white flex-col text-center rounded-[32px] w-[900px] justify-items-start pt-8 pb-8 pl-8 pr-20 ticket-left-part ticket-left-part-2 overflow-hidden relative gap-8 w-7/10">
+						
+						<div class="flex justify-between mb-8">
+							<div class="flex rounded-[16px] items-center bg-white flex-col lg:flex-row sm:justify-center rounded-[12px] info-count-box relative gap-5">
+								<div>
+									<img src="images/bus-logo.png" alt="Shoes" />					
+								</div>
+								<div class="flex flex-col">
+									<h3 class="font-inter text-black text-2xl lg:text-3xl text-center sm:text-center pb-2">Greenline Paribahan</h3>
+									<p class="text-primaryTextColor font-inter text-left">Coach-009-WEB ! AC_Business</p>
+								</div>
+							</div>
+
+							<div class="total-seat-holder">								
+								<div class="btn text-primaryColor bg-primaryBgLight text-lg font-inter border-primaryBgLight py-4 px-8 h-auto"><svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.83333 13.6427C6.45217 13.6427 7.04566 13.8885 7.48325 14.3261C7.92083 14.7637 8.16667 15.3572 8.16667 15.976V18.3093H19.8333V15.976C19.8333 15.3572 20.0792 14.7637 20.5168 14.3261C20.9543 13.8885 21.5478 13.6427 22.1667 13.6427M5.83333 13.6427C5.21449 13.6427 4.621 13.8885 4.18342 14.3261C3.74583 14.7637 3.5 15.3572 3.5 15.976V20.6427C3.5 21.2615 3.74583 21.855 4.18342 22.2926C4.621 22.7302 5.21449 22.976 5.83333 22.976H22.1667C22.7855 22.976 23.379 22.7302 23.8166 22.2926C24.2542 21.855 24.5 21.2615 24.5 20.6427V15.976C24.5 15.3572 24.2542 14.7637 23.8166 14.3261C23.379 13.8885 22.7855 13.6427 22.1667 13.6427M5.83333 13.6427V7.80933C5.83333 6.88107 6.20208 5.99083 6.85846 5.33445C7.51484 4.67808 8.40508 4.30933 9.33333 4.30933H18.6667C19.5949 4.30933 20.4852 4.67808 21.1415 5.33445C21.7979 5.99083 22.1667 6.88107 22.1667 7.80933V13.6427M7 22.976V25.3093M21 22.976V25.3093" stroke="#1DD100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg><span id="total-seat-left">40</span> Seats left</div>
+							</div>
+						</div>
+
+						<div class="bg-[#F7F8F8] rounded-[24px] p-8">
+							<div class="flex justify-between mb-4 pb-4 border-dashed border-b border-[rgba(3,8,18,0.20)]">
+								<div class="text-lg font-semibold">Route</div>
+								<div class="text-black text-lg font-semibold">Dhaka - Sylhet</div>
+							</div>
+							<div class="flex justify-between mb-4 pb-4 border-dashed border-b border-[rgba(3,8,18,0.20)]">
+								<div class="text-lg font-semibold">Departure Time</div>
+								<div class="text-black text-lg font-semibold">9:00 PM</div>
+							</div>
+							<div class="flex flex-row flex-warp justify-between gap-4 mt-8">
+								<button class="btn">Boarding Point - Laxmipur</button>
+								<button class="btn">Dropping Point - Bogura</button>
+								<button class="btn">Est. Time - 11 Hour</button>
+							</div>
+
+
+						</div>
+
+					</div>
+
+					<div class="join-item text-center bg-white flex flex-col rounded-[16px] w-[245px] items-center justify-items-center pt-8 pr-8 pb-8 pl-10 justify-center w-3/10 gap-2 relative ticket-right-part-2">
+						<img src="images/fare.png" alt="taka">
+						<h4 class="font-raleway text-3xl font-extrabold text-primaryheadingColor">550 Taka</h4>
+						<p class="font-inter font-semibold">Per Seat</p>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<div class="md:container-xl md:mx-auto max-w-[1200px] md:pt-12 md:pb-12 sm:pt-6 sm:pb-6 bg-white rounded-[24px] p-8">
+
+			<div class="grid grid-cols-1 md:grid-cols-10 gap-10">
+
+				<div class="md:col-span-6 seat-plan">
+					<h4 class="text-black mb-4 font-raleway font-semibold text-xl md:text-2xl">Select Your Seat</h4>
+					<div class="flex border-dashed border-y py-4 justify-between">
+						<div class="flex font-semibold"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.83333 12.8333C6.45217 12.8333 7.04566 13.0792 7.48325 13.5168C7.92083 13.9543 8.16667 14.5478 8.16667 15.1667V17.5H19.8333V15.1667C19.8333 14.5478 20.0792 13.9543 20.5168 13.5168C20.9543 13.0792 21.5478 12.8333 22.1667 12.8333M5.83333 12.8333C5.21449 12.8333 4.621 13.0792 4.18342 13.5168C3.74583 13.9543 3.5 14.5478 3.5 15.1667V19.8333C3.5 20.4522 3.74583 21.0457 4.18342 21.4832C4.621 21.9208 5.21449 22.1667 5.83333 22.1667H22.1667C22.7855 22.1667 23.379 21.9208 23.8166 21.4832C24.2542 21.0457 24.5 20.4522 24.5 19.8333V15.1667C24.5 14.5478 24.2542 13.9543 23.8166 13.5168C23.379 13.0792 22.7855 12.8333 22.1667 12.8333M5.83333 12.8333V7C5.83333 6.07174 6.20208 5.1815 6.85846 4.52513C7.51484 3.86875 8.40508 3.5 9.33333 3.5H18.6667C19.5949 3.5 20.4852 3.86875 21.1415 4.52513C21.7979 5.1815 22.1667 6.07174 22.1667 7V12.8333M7 22.1667V24.5M21 22.1667V24.5" stroke="#030712" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg> &nbsp; Available</div>
+						<div class="flex font-semibold text-primaryColor"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.83333 12.8333C6.45217 12.8333 7.04566 13.0792 7.48325 13.5168C7.92083 13.9543 8.16667 14.5478 8.16667 15.1667V17.5H19.8333V15.1667C19.8333 14.5478 20.0792 13.9543 20.5168 13.5168C20.9543 13.0792 21.5478 12.8333 22.1667 12.8333C22.7855 12.8333 23.379 13.0792 23.8166 13.5168C24.2542 13.9543 24.5 14.5478 24.5 15.1667V19.8333C24.5 20.4522 24.2542 21.0457 23.8166 21.4832C23.379 21.9208 22.7855 22.1667 22.1667 22.1667H5.83333C5.21449 22.1667 4.621 21.9208 4.18342 21.4832C3.74583 21.0457 3.5 20.4522 3.5 19.8333V15.1667C3.5 14.5478 3.74583 13.9543 4.18342 13.5168C4.621 13.0792 5.21449 12.8333 5.83333 12.8333Z" fill="#1DD100"/>
+							<path d="M5.83333 12.8333V7C5.83333 6.07174 6.20208 5.1815 6.85846 4.52513C7.51484 3.86875 8.40508 3.5 9.33333 3.5H18.6667C19.5949 3.5 20.4852 3.86875 21.1415 4.52513C21.7979 5.1815 22.1667 6.07174 22.1667 7V12.8333" fill="#1DD100"/>
+							<path d="M7 22.1667V24.5V22.1667Z" fill="#1DD100"/>
+							<path d="M21 22.1667V24.5V22.1667Z" fill="#1DD100"/>
+							<path d="M5.83333 12.8333C6.45217 12.8333 7.04566 13.0792 7.48325 13.5168C7.92083 13.9543 8.16667 14.5478 8.16667 15.1667V17.5H19.8333V15.1667C19.8333 14.5478 20.0792 13.9543 20.5168 13.5168C20.9543 13.0792 21.5478 12.8333 22.1667 12.8333M5.83333 12.8333C5.21449 12.8333 4.621 13.0792 4.18342 13.5168C3.74583 13.9543 3.5 14.5478 3.5 15.1667V19.8333C3.5 20.4522 3.74583 21.0457 4.18342 21.4832C4.621 21.9208 5.21449 22.1667 5.83333 22.1667H22.1667C22.7855 22.1667 23.379 21.9208 23.8166 21.4832C24.2542 21.0457 24.5 20.4522 24.5 19.8333V15.1667C24.5 14.5478 24.2542 13.9543 23.8166 13.5168C23.379 13.0792 22.7855 12.8333 22.1667 12.8333M5.83333 12.8333V7C5.83333 6.07174 6.20208 5.1815 6.85846 4.52513C7.51484 3.86875 8.40508 3.5 9.33333 3.5H18.6667C19.5949 3.5 20.4852 3.86875 21.1415 4.52513C21.7979 5.1815 22.1667 6.07174 22.1667 7V12.8333M7 22.1667V24.5M21 22.1667V24.5" stroke="#1DD100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg> &nbsp; Selected</div>
+					</div>
+					<div class="">
+						<div class="bus-plan">
+							<div class="column">
+								<div class="no-seat-bg"></div>
+								<div class="no-seat-bg">A</div>
+								<div class="no-seat-bg">B</div>
+								<div class="no-seat-bg">C</div>
+								<div class="no-seat-bg">D</div>
+								<div class="no-seat-bg">E</div>
+								<div class="no-seat-bg">F</div>
+								<div class="no-seat-bg">G</div>
+								<div class="no-seat-bg">H</div>
+								<div class="no-seat-bg">I</div>
+								<div class="no-seat-bg">J</div>
+							</div>
+							<div class="column">
+								<div class="no-seat-bg"></div>
+								<div id="" class="seat">A1</div>
+								<div id="" class="seat">B1</div>
+								<div id="" class="seat">C1</div>
+								<div id="" class="seat">D1</div>
+								<div id="" class="seat">E1</div>
+								<div id="" class="seat">F1</div>
+								<div id="" class="seat">G1</div>
+								<div id="" class="seat">H1</div>
+								<div id="" class="seat">I1</div>
+								<div id="" class="seat">J1</div>
+							</div>
+							<div class="column">
+								<div class="no-seat-bg"></div>
+								<div class="seat">A2</div>
+								<div class="seat">B2</div>
+								<div class="seat">C2</div>
+								<div class="seat">D2</div>
+								<div class="seat">E2</div>
+								<div class="seat">F2</div>
+								<div class="seat">G2</div>
+								<div class="seat">H2</div>
+								<div class="seat">I2</div>
+								<div class="seat">J2</div>
+							</div>
+							<div class="blank-column"></div> <!-- Blank column -->
+							<div class="column">
+								<div class="no-seat-bg"></div>
+								<div class="seat">A3</div>
+								<div class="seat">B3</div>
+								<div class="seat">C3</div>
+								<div class="seat">D3</div>
+								<div class="seat">E3</div>
+								<div class="seat">F3</div>
+								<div class="seat">G3</div>
+								<div class="seat">H3</div>
+								<div class="seat">I3</div>
+								<div class="seat">J3</div>
+							</div>
+							<div class="column">
+								<div class="no-seat-bg driver"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16 28C14.4241 28 12.8637 27.6896 11.4078 27.0866C9.95189 26.4835 8.62902 25.5996 7.51472 24.4853C6.40042 23.371 5.5165 22.0481 4.91345 20.5922C4.31039 19.1363 4 17.5759 4 16C4 14.4241 4.31039 12.8637 4.91345 11.4078C5.5165 9.95189 6.40042 8.62902 7.51472 7.51472C8.62902 6.40042 9.95189 5.5165 11.4078 4.91345C12.8637 4.31039 14.4241 4 16 4C17.5759 4 19.1363 4.31039 20.5922 4.91345C22.0481 5.5165 23.371 6.40042 24.4853 7.51472C25.5996 8.62902 26.4835 9.95189 27.0866 11.4078C27.6896 12.8637 28 14.4241 28 16C28 17.5759 27.6896 19.1363 27.0866 20.5922C26.4835 22.0481 25.5996 23.371 24.4853 24.4853C23.371 25.5996 22.0481 26.4835 20.5922 27.0866C19.1363 27.6896 17.5759 28 16 28ZM16 28V18.6667M13.3333 16C13.3333 16.7072 13.6143 17.3855 14.1144 17.8856C14.6145 18.3857 15.2928 18.6667 16 18.6667M13.3333 16C13.3333 15.2928 13.6143 14.6145 14.1144 14.1144C14.6145 13.6143 15.2928 13.3333 16 13.3333C16.7072 13.3333 17.3855 13.6143 17.8856 14.1144C18.3857 14.6145 18.6667 15.2928 18.6667 16M13.3333 16L4.33333 13.3333M16 18.6667C16.7072 18.6667 17.3855 18.3857 17.8856 17.8856C18.3857 17.3855 18.6667 16.7072 18.6667 16M18.6667 16L27.6667 13.3333" stroke="#030712" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg></div>
+								<div class="seat">A4</div>
+								<div class="seat">B4</div>
+								<div class="seat">C4</div>
+								<div class="seat">D4</div>
+								<div class="seat">E4</div>
+								<div class="seat">F4</div>
+								<div class="seat">G4</div>
+								<div class="seat">H4</div>
+								<div class="seat">I4</div>
+								<div class="seat">J4</div>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+				<div class="md:col-span-4 account">					
+					<h4 class="text-black mb-4 font-raleway font-semibold text-xl md:text-2xl border-b pb-4 border-dashed">Select Your Seat</h4>
+					<div class="bg-[#F7F8F8] rounded-lg p-8">
+						<div class="flex flex-row justify-between border-dashed border-b pb-2 mb-4 ">
+							<div class="text-primaryheadingColor font-semibold">Seat <span id="selectedTicketNumber" class="bg-primaryColor text-white px-2 rounded-md">0</span></div>
+							<div class="text-primaryheadingColor font-semibold">Class</div>
+							<div class="text-primaryheadingColor font-semibold">Price</div>
+						</div>
+						<div class="add-seat-list">
+
+						</div>
+						<hr>						
+						<div class="flex flex-row justify-between border-dashed border-b py-2">
+							<div class="text-primaryheadingColor font-semibold">Total Price</div>							
+							<div class="text-primaryheadingColor font-semibold">BDT <span id="initial-total">0</span></div>
+						</div>
+						<div id="promo-block" class="my-4">
+							<label class="input input-bordered flex items-center gap-2 mb-4">
+								<input id="promCode" type="text" class="grow" placeholder="Apply Coupon Code" disabled />
+								<button id="promoApplyButton" class="btn btn-success btn-disabled btn-sm text-white">Apply</button>									
+							</label>
+							<p class="promo-error hidden text-center">Please enter a valid Promo Code</p>							
+						</div>
+						<p class="promo-success hidden text-center text-bold text-success">Congrats! Your Promo Applied Successfully. Have a Nice Journey!!</p>
+						<div class="flex flex-row justify-between border-dashed border-b py-2">
+							<div class="text-primaryheadingColor font-semibold">Grand Total</div>							
+							<div class="text-primaryheadingColor font-semibold">BDT <span id="grand-total">0</span></div>							
+						</div>						
+					</div>
+					<div class="my-4">
+						<label class="text-base font-inter font-semibold text-primaryheadingColor block mb-2">Passenger Name*</label>
+						<input type="text" placeholder="Enter Your Name" class="input input-bordered input-[rgba(3,8,17,.40)] w-full py-2 text-sm h-14">
+					</div>
+					<div class="my-4">
+						<label class="text-base font-inter font-semibold text-primaryheadingColor block mb-2">Phone Number*</label>
+						<input id="emailField" value="" type="number" required placeholder="Enter Your Phone" class="input input-bordered input-[rgba(3,8,17,.40)] w-full py-2 text-sm h-14">
+					</div>
+					<div class="my-4">
+						<label class="text-base font-inter font-semibold text-primaryheadingColor block mb-2">Email ID</label>
+						<input type="email" value="" placeholder="Enter Your Email" class="input input-bordered input-[rgba(3,8,17,.40)] w-full py-2 text-sm h-14">
+					</div>
+					<p class="final-error hidden text-center">Please Book the Seat First & Put the Phone</p>
+					<div class="my-4">
+						<button onclick="my_modal_2.showModal()" id="final_button" class="btn btn-wide bg-primaryColor text-white py-4 text-lg w-full h-14 btn-disabled">Next</button>
+					</div>	
+					<div class="flex flex-row justify-evenly pb-4">
+						<div class="underline underline-offset-4 text-primaryTextColor">Terms and Conditions</div>
+						<div class="underline underline-offset-4 text-primaryTextColor">Cancellation Policy</div>
+					</div>				
+					
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+    <footer class="bg-primaryheadingColor py-12 sm:py-24 text-white">
+
+		<div class="md:container-xl px-4 md:mx-auto max-w-[1200px] text-white">
+
+			<div class="flex-col md:flex-row flex">
+
+				<div class="w-full md:w-[20rem] md:text-left mb-8 md:mb-0 text-center min-w-48">
+					<h3 class="text-3xl font-extrabold mb-6">Get In touch</h3>
+					<p class="md:max-w-64 max-w-[297px] mx-auto md:mx-0 mb-4 text-primaryTextColoronDark font-medium">This is the best bus ticketing service bin the world you need!</p>
+					<ul class="">
+						<li><i class="fa-regular fa-envelope text-primaryColor mr-2 mb-4"></i> bus@support.com </li>
+						<li><i class="fa-solid fa-phone text-primaryColor text-primaryColor mr-2"></i> (+62) 123-321-543</li>
+					</ul>
+				</div>
+
+				<div class="w-full md:w-[36rem] flex mb-8 md:mb-0 justify-evenly">
+					<div>
+						<h3 class="text-lg font-bold mb-8">Company</h3>
+						<ul class="text-primaryTextColoronDark font-medium">
+							<li class="mb-4"><a href="#">About Us</a></li>
+							<li class="mb-4"><a href="#">Leadership</a></li>
+							<li class="mb-4"><a href="#">Careers</a></li>
+							<li class="mb-4"><a href="#">News & Article</a></li>
+						</ul>
+					</div>
+					<div>					
+						<h3 class="text-lg font-bold mb-8">Support</h3>	
+						<ul class="text-primaryTextColoronDark font-medium">
+							<li class="mb-4">Help Center</li>
+							<li class="mb-4">FAQ</li>
+							<li class="mb-4">Ticket Support</li>
+							<li class="mb-4">News & Article</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="flex-1 min-w-48 md:text-left text-center">
+					<h3 class="text-lg font-bold mb-8">Service</h3>	
+					<ul class="text-primaryTextColoronDark font-medium">
+						<li class="mb-4">Academy</li>
+						<li class="mb-4">Group Location</li>
+						<li class="mb-4">Priveate Lesson</li>
+						<li class="mb-4">Hockey For adults</li>
+					</ul>
+				</div>
+
+			</div>
+		
+
+		</div>
+    </footer>
+
+<!--Modal here-->
+<dialog id="my_modal_2" class="modal">
+	<div class="modal-box text-center">
+		<img class="mx-auto py-4" src="images/thank-icon.png" alt="thank-icon" />
+		<h3 class="font-bold text-lg text-primaryColor py-4">Success</h3>
+		<h4 class="text-black py-4 font-bold">Thank you for Booking Our Bus Seats.</h4>
+		<p class="py-4">We are working hard to find the best service and deals for you. 
+		Shortly you will find a confirmation in your email.</p>
+		<p class="py-4">Press ESC key or click outside to close</p>
+			<form method="dialog" class="modal-backdrop">
+				<button class="btn btn-success">Continue</button>
+			</form>
+	</div>
+
+</dialog>
+
+	<script src="js/script.js"></script>
+
+</body>
+</html>
