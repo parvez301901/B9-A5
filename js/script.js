@@ -99,7 +99,9 @@ promoApplyButton.addEventListener('click', function(){
 		old_grand_total_holder.innerText = initialTotal - ((((parseInt(initialTotal)) * 15 )) / 100);	
 		let promo_success = document.getElementsByClassName('promo-success');		
 		promo_success[0].classList.remove('hidden');
-		document.getElementById('promo-block').classList.add('hidden');
+		document.getElementById('promo-block').classList.add('hidden');		
+		let readyDiv =`<div id="discountBar" class="flex flex-row justify-between pb-4"><div class="text-primaryheadingColor">Discount</div><div class="text-primaryheadingColor">BDT -`+ ((((parseInt(initialTotal)) * 15 )) / 100) +`</div></div>`;
+		document.querySelector('.add-discount-list').innerHTML += readyDiv;		
 
 	} else if ( promoCode.value === 'Couple 20' ) {
 
@@ -108,7 +110,9 @@ promoApplyButton.addEventListener('click', function(){
 		old_grand_total_holder.innerText = initialTotal - ((((parseInt(initialTotal)) * 20 )) / 100);
 		let promo_success = document.getElementsByClassName('promo-success');
 		promo_success[0].classList.remove('hidden');
-		document.getElementById('promo-block').classList.add('hidden');
+		document.getElementById('promo-block').classList.add('hidden');		
+		let readyDiv =`<div id="discountBar" class="flex flex-row justify-between pb-4"><div class="text-primaryheadingColor">Discount</div><div class="text-primaryheadingColor">BDT -`+ ((((parseInt(initialTotal)) * 20 )) / 100) +`</div></div>`;
+		document.querySelector('.add-discount-list').innerHTML += readyDiv;	
 		
 	} else {
 		let promo_error = document.getElementsByClassName('promo-error');
